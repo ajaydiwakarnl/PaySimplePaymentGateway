@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa223a0d00d7c7ae88e3ad2a9cdf6e47",
+    "content-hash": "529a1bf4e97c9bbbfc71fe97778bd616",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1871,6 +1871,172 @@
             "time": "2021-07-03T13:36:55+00:00"
         },
         {
+            "name": "nikolag/core",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NikolaGavric94/nikolag-core.git",
+                "reference": "5aff1b24c6e884ca4ebed82bc25ca9c7d030afa0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NikolaGavric94/nikolag-core/zipball/5aff1b24c6e884ca4ebed82bc25ca9c7d030afa0",
+                "reference": "5aff1b24c6e884ca4ebed82bc25ca9c7d030afa0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/console": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/container": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/contracts": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/database": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/filesystem": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/support": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "php": ">=7.0"
+            },
+            "type": "laravel-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Nikolag\\Core\\Providers\\MigrationServiceProvider",
+                        "Nikolag\\Core\\Providers\\CoreServiceProvider"
+                    ],
+                    "facades": [
+                        "Nikolag\\Core\\Facades\\CoreService"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nikolag\\Core\\": "src/",
+                    "Nikolag\\Core\\Abstracts\\": "src/abstracts",
+                    "Nikolag\\Core\\Contracts\\": "src/contracts",
+                    "Nikolag\\Core\\Exceptions\\": "src/exceptions",
+                    "Nikolag\\Core\\Facades\\": "src/facades",
+                    "Nikolag\\Core\\Models\\": "src/models",
+                    "Nikolag\\Core\\Providers\\": "src/providers",
+                    "Nikolag\\Core\\Traits\\": "src/traits",
+                    "Nikolag\\Core\\Utils\\": "src/utils"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nikola Gavric",
+                    "email": "nikola.gavric94@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Nikolag Core package for Laravel payment integrations that are not part of the Cashier",
+            "keywords": [
+                "finances",
+                "laravel",
+                "payments",
+                "payments laravel integration"
+            ],
+            "support": {
+                "issues": "https://github.com/NikolaGavric94/nikolag-core/issues",
+                "source": "https://github.com/NikolaGavric94/nikolag-core/tree/v2.5.0"
+            },
+            "time": "2021-01-02T15:54:50+00:00"
+        },
+        {
+            "name": "nikolag/laravel-square",
+            "version": "v2.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NikolaGavric94/laravel-square.git",
+                "reference": "991644a6211190eeaf491b01470344a5829d818c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NikolaGavric94/laravel-square/zipball/991644a6211190eeaf491b01470344a5829d818c",
+                "reference": "991644a6211190eeaf491b01470344a5829d818c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/console": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/container": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/contracts": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/database": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/filesystem": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "illuminate/support": "~5.5|~5.6|~5.7|~5.8|~6.0|~7.0|~8.0",
+                "nikolag/core": "2.5.*",
+                "php": ">=7.0",
+                "square/connect": "3.20200528.1"
+            },
+            "require-dev": {
+                "fakerphp/faker": "^1.13",
+                "orchestra/testbench": "~3.6|~3.7|~3.8|~4.0|~5.0|~6.0",
+                "phpunit/phpunit": "~6.0|~7.0|~8.0|~9.0"
+            },
+            "type": "laravel-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Nikolag\\Square\\Providers\\SquareServiceProvider"
+                    ],
+                    "aliases": {
+                        "Square": "Nikolag\\Square\\Facades\\Square"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nikolag\\Square\\": "src/",
+                    "Nikolag\\Square\\Contracts\\": "src/contracts",
+                    "Nikolag\\Square\\Exceptions\\": "src/exceptions",
+                    "Nikolag\\Square\\Facades\\": "src/facades",
+                    "Nikolag\\Square\\Models\\": "src/models",
+                    "Nikolag\\Square\\Providers\\": "src/providers",
+                    "Nikolag\\Square\\Traits\\": "src/traits",
+                    "Nikolag\\Square\\Utils\\": "src/utils",
+                    "Nikolag\\Square\\Builders\\": "src/builders"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nikola Gavric",
+                    "email": "nikola.gavric94@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Square API integration with Laravel built on nikolag/core",
+            "keywords": [
+                "laravel",
+                "laravel square",
+                "library",
+                "nikolag",
+                "nikolag square",
+                "nikolag-square",
+                "package",
+                "square",
+                "square laravel integration",
+                "square-laravel"
+            ],
+            "support": {
+                "email": "nikola.gavric94@gmail.com",
+                "issues": "https://github.com/NikolaGavric94/laravel-square/issues",
+                "source": "https://github.com/NikolaGavric94/laravel-square",
+                "wiki": "https://github.com/NikolaGavric94/laravel-square/wiki"
+            },
+            "time": "2021-01-02T19:33:52+00:00"
+        },
+        {
             "name": "omnipay/common",
             "version": "v3.1.2",
             "source": {
@@ -3119,6 +3285,62 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "square/connect",
+            "version": "3.20200528.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/square/connect-php-sdk.git",
+                "reference": "14f47f31b5f2ed7ba5f5f9a5255cc366501b1774"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/square/connect-php-sdk/zipball/14f47f31b5f2ed7ba5f5f9a5255cc366501b1774",
+                "reference": "14f47f31b5f2ed7ba5f5f9a5255cc366501b1774",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SquareConnect\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Square, Inc.",
+                    "homepage": "https://squareup.com/developers"
+                }
+            ],
+            "description": "PHP client library for the Square Connect v2 API",
+            "homepage": "https://github.com/square/connect-php-sdk",
+            "keywords": [
+                "api",
+                "php",
+                "sdk",
+                "swagger"
+            ],
+            "support": {
+                "issues": "https://github.com/square/connect-php-sdk/issues",
+                "source": "https://github.com/square/connect-php-sdk/tree/master"
+            },
+            "abandoned": true,
+            "time": "2020-06-10T16:23:43+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

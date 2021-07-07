@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TestController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('payment',[TestController::class,'doPayment'])->name('makePayment');
+
+Route::get('square-payment',[App\Http\Controllers\ChargeController::class,'index'])->name('index');
+Route::post('do-square-payment',[App\Http\Controllers\SquareController::class,'addCard'])->name('add-card');
